@@ -5,9 +5,7 @@ import android.database.Cursor
 import com.strainteam.mispropinasisa.sqliteHelper.DbHelper
 
 class HistorialProvider(context: Context) {
-
-    private val mHistorial : MutableList<HistorialList.Historial> = ArrayList()
-
-    val cursorHist : Cursor = DbHelper(context, null).getHistorial()
-
+    companion object{
+        var historial : HistorialList = HistorialList(lista = emptyList())
+    }
 }

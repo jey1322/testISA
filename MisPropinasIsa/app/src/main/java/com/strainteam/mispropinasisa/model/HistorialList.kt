@@ -1,7 +1,7 @@
 package com.strainteam.mispropinasisa.model
 
 data class HistorialList(
-    val Lista : List<Historial>
+    val lista : List<Historial>
 ){
     class Historial{
         val id: Int = 0
