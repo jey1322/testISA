@@ -29,8 +29,8 @@ RecyclerView.Adapter<HistorialAdapter.HistorialViewHolder>(){
             binding.tvFecha.text = historial.fecha
             binding.tvComercio.text = historial.nombreComercio
             binding.tvMonto.text = "Monto: ${historial.subtotal}"
-            binding.tvDescuento.text = "Propina: ${historial.descuentoPorcentaje}%"
-            binding.tvTotalDesc.text = "Monto Prop: ${historial.descuento}"
+            binding.tvDescuento.text = "Propina: ${historial.propinaPorcentaje}%"
+            binding.tvTotalDesc.text = "Monto Prop: ${historial.propina}"
             binding.tvTotal.text = "Total: ${historial.total}"
             binding.tvMoneda.text = historial.moneda+" "+historial.idMoneda
         }

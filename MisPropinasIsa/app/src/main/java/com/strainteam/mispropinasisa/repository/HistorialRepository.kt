@@ -30,8 +30,8 @@ class HistorialRepository(context: Context) {
                     this.id = id
                     this.nombreComercio = nombreComercio
                     this.subtotal = subtotal
-                    this.descuentoPorcentaje = descuentoPorcentaje
-                    this.descuento = descuento
+                    this.propinaPorcentaje = descuentoPorcentaje
+                    this.propina = descuento
                     this.total = total
                     this.fecha = fecha
                     this.moneda = moneda

@@ -14,8 +14,8 @@ class DbHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): SQLite
         val ID = "id"
         val NOMBRE_COMERCIO = "nombreComercio"
         val SUBTOTAL = "subtotal"
-        val DESCUENTO_PORCENTAJE = "propinaPorcentaje"
-        val DESCUENTO = "propina"
+        val PROPINA_PORCENTAJE = "propinaPorcentaje"
+        val PROPINA = "propina"
         val TOTAL = "total"
         val FECHA = "fecha"
         val MONEDA = "moneda"
@@ -27,8 +27,8 @@ class DbHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): SQLite
                 + ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + NOMBRE_COMERCIO + " TEXT,"
                 + SUBTOTAL + " REAL,"
-                + DESCUENTO_PORCENTAJE + " TEXT,"
-                + DESCUENTO + " REAL,"
+                + PROPINA_PORCENTAJE + " TEXT,"
+                + PROPINA + " REAL,"
                 + TOTAL + " REAL,"
                 + FECHA + " TEXT"
                 + MONEDA + "TEXT"
@@ -46,8 +46,8 @@ class DbHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): SQLite
         val values = ContentValues()
         values.put(NOMBRE_COMERCIO, nombreComercio)
         values.put(SUBTOTAL, subtotal)
-        values.put(DESCUENTO_PORCENTAJE, descuentoPorcentaje)
-        values.put(DESCUENTO, descuento)
+        values.put(PROPINA_PORCENTAJE, descuentoPorcentaje)
+        values.put(PROPINA, descuento)
         values.put(TOTAL, total)
         values.put(FECHA, fecha)
         values.put(MONEDA, moneda)
@@ -75,8 +75,8 @@ class DbHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): SQLite
         val values = ContentValues()
         values.put(NOMBRE_COMERCIO, nombreComercio)
         values.put(SUBTOTAL, subtotal)
-        values.put(DESCUENTO_PORCENTAJE, descuentoPorcentaje)
-        values.put(DESCUENTO, descuento)
+        values.put(PROPINA_PORCENTAJE, descuentoPorcentaje)
+        values.put(PROPINA, descuento)
         values.put(TOTAL, total)
         values.put(FECHA, fecha)
         values.put(MONEDA, moneda)
