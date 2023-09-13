@@ -1,15 +1,17 @@
 package com.strainteam.mispropinasisa.model
 
 data class HistorialList(
-    val lista : List<Historial>
+    var lista : List<Historial>
 ){
     class Historial{
-        val id: Int = 0
-        val nombreComercio: String = ""
-        val subtotal : Double = 0.0
-        val descuentoPorcentaje : String = ""
-        val descuento : Double = 0.0
-        val total : Double = 0.0
-        val fecha : String = ""
+        var id: Int = 0
+        var nombreComercio: String = ""
+        var subtotal : Double = 0.0
+        var descuentoPorcentaje : String = ""
+        var descuento : Double = 0.0
+        var total : Double = 0.0
+        var fecha : String = ""
+        var moneda : String = ""
+        var idMoneda : String = ""
     }
 }

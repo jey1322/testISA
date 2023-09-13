@@ -18,6 +18,8 @@ class DbHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): SQLite
         val DESCUENTO = "descuento"
         val TOTAL = "total"
         val FECHA = "fecha"
+        val MONEDA = "moneda"
+        val IDMONEDA = "idMoneda"
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
@@ -28,7 +30,9 @@ class DbHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): SQLite
                 + DESCUENTO_PORCENTAJE + " TEXT,"
                 + DESCUENTO + " REAL,"
                 + TOTAL + " REAL,"
-                + FECHA + " TEXT" + ")")
+                + FECHA + " TEXT"
+                + MONEDA + "TEXT"
+                + IDMONEDA + "TEXT" + ")")
         db?.execSQL(CREATE_TABLE)
     }
 
@@ -37,7 +41,7 @@ class DbHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): SQLite
         onCreate(db)
     }
 
-    fun saveHistorial(nombreComercio: String, subtotal: Double, descuentoPorcentaje: String, descuento: Double, total: Double, fecha: String){
+    fun saveHistorial(nombreComercio: String, subtotal: Double, descuentoPorcentaje: String, descuento: Double, total: Double, fecha: String, moneda: String, idMoneda: String){
         val db = this.writableDatabase
         val values = ContentValues()
         values.put(NOMBRE_COMERCIO, nombreComercio)
@@ -46,6 +50,8 @@ class DbHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): SQLite
         values.put(DESCUENTO, descuento)
         values.put(TOTAL, total)
         values.put(FECHA, fecha)
+        values.put(MONEDA, moneda)
+        values.put(IDMONEDA, idMoneda)
         db.insert(TABLE_NAME, null, values)
         db.close()
     }
@@ -64,7 +70,7 @@ class DbHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): SQLite
         return cursor
     }
 
-    fun updateOneHistorial (Id: String, nombreComercio: String, subtotal: Double, descuentoPorcentaje: String, descuento: Double, total: Double, fecha: String) {
+    fun updateOneHistorial (Id: String, nombreComercio: String, subtotal: Double, descuentoPorcentaje: String, descuento: Double, total: Double, fecha: String, moneda: String, idMoneda: String) {
         val db = this.writableDatabase
         val values = ContentValues()
         values.put(NOMBRE_COMERCIO, nombreComercio)
@@ -73,6 +79,8 @@ class DbHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): SQLite
         values.put(DESCUENTO, descuento)
         values.put(TOTAL, total)
         values.put(FECHA, fecha)
+        values.put(MONEDA, moneda)
+        values.put(IDMONEDA, idMoneda)
         db.update(TABLE_NAME, values, "$ID = ?", arrayOf(Id))
         db.close()
     }
