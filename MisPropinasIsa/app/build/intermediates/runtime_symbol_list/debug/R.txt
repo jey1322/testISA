@@ -74,6 +74,10 @@ int animator mtrl_fab_hide_motion_spec 0x7f02001e
 int animator mtrl_fab_show_motion_spec 0x7f02001f
 int animator mtrl_fab_transformation_sheet_collapse_spec 0x7f020020
 int animator mtrl_fab_transformation_sheet_expand_spec 0x7f020021
+int array com_google_android_gms_fonts_certs 0x7f130000
+int array com_google_android_gms_fonts_certs_dev 0x7f130001
+int array com_google_android_gms_fonts_certs_prod 0x7f130002
+int array preloaded_fonts 0x7f130003
 int attr SharedValue 0x7f030000
 int attr SharedValueId 0x7f030001
 int attr actionBarDivider 0x7f030002
@@ -1335,6 +1339,7 @@ int color background_floating_material_dark 0x7f05001d
 int color background_floating_material_light 0x7f05001e
 int color background_material_dark 0x7f05001f
 int color background_material_light 0x7f050020
+int color backp 0x7f0502e8
 int color black 0x7f050021
 int color bright_foreground_disabled_material_dark 0x7f050022
 int color bright_foreground_disabled_material_light 0x7f050023
@@ -1350,6 +1355,7 @@ int color cardview_dark_background 0x7f05002c
 int color cardview_light_background 0x7f05002d
 int color cardview_shadow_end_color 0x7f05002e
 int color cardview_shadow_start_color 0x7f05002f
+int color celeste 0x7f0502e9
 int color design_bottom_navigation_shadow_color 0x7f050030
 int color design_box_stroke_color 0x7f050031
 int color design_dark_default_color_background 0x7f050032
@@ -2031,6 +2037,9 @@ int color primary_text_default_material_dark 0x7f0502d5
 int color primary_text_default_material_light 0x7f0502d6
 int color primary_text_disabled_material_dark 0x7f0502d7
 int color primary_text_disabled_material_light 0x7f0502d8
+int color purple_200 0x7f0502ea
+int color purple_500 0x7f0502eb
+int color purple_700 0x7f0502ec
 int color ripple_material_dark 0x7f0502d9
 int color ripple_material_light 0x7f0502da
 int color secondary_text_default_material_dark 0x7f0502db
@@ -2043,6 +2052,9 @@ int color switch_thumb_material_dark 0x7f0502e1
 int color switch_thumb_material_light 0x7f0502e2
 int color switch_thumb_normal_material_dark 0x7f0502e3
 int color switch_thumb_normal_material_light 0x7f0502e4
+int color teal_200 0x7f0502ed
+int color teal_700 0x7f0502ee
+int color text 0x7f0502ef
 int color tooltip_background_dark 0x7f0502e5
 int color tooltip_background_light 0x7f0502e6
 int color white 0x7f0502e7
@@ -2900,6 +2912,7 @@ int drawable abc_textfield_search_activated_mtrl_alpha 0x7f070074
 int drawable abc_textfield_search_default_mtrl_alpha 0x7f070075
 int drawable abc_textfield_search_material 0x7f070076
 int drawable abc_vector_test 0x7f070077
+int drawable add 0x7f0700e6
 int drawable avd_hide_password 0x7f070078
 int drawable avd_show_password 0x7f070079
 int drawable btn_checkbox_checked_mtrl 0x7f07007a
@@ -2915,6 +2928,7 @@ int drawable design_ic_visibility 0x7f070083
 int drawable design_ic_visibility_off 0x7f070084
 int drawable design_password_eye 0x7f070085
 int drawable design_snackbar_background 0x7f070086
+int drawable dianoche 0x7f0700e7
 int drawable ic_arrow_back_black_24 0x7f070087
 int drawable ic_call_answer 0x7f070088
 int drawable ic_call_answer_low 0x7f070089
@@ -3010,6 +3024,7 @@ int drawable notify_panel_notification_icon_bg 0x7f0700e2
 int drawable test_level_drawable 0x7f0700e3
 int drawable tooltip_frame_dark 0x7f0700e4
 int drawable tooltip_frame_light 0x7f0700e5
+int font montserrat 0x7f140000
 int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002
@@ -3238,6 +3253,8 @@ int id invisible 0x7f0800e0
 int id inward 0x7f0800e1
 int id italic 0x7f0800e2
 int id item_touch_helper_previous_elevation 0x7f0800e3
+int id ivAdd 0x7f0801f0
+int id ivDark 0x7f0801f4
 int id jumpToEnd 0x7f0800e4
 int id jumpToStart 0x7f0800e5
 int id labeled 0x7f0800e6
@@ -3483,6 +3500,9 @@ int id transition_position 0x7f0801d5
 int id transition_scene_layoutid_cache 0x7f0801d6
 int id transition_transform 0x7f0801d7
 int id triangle 0x7f0801d8
+int id tvAdd 0x7f0801f1
+int id tvHome 0x7f0801f2
+int id tvNew 0x7f0801f3
 int id unchecked 0x7f0801d9
 int id uniform 0x7f0801da
 int id unlabeled 0x7f0801db
