@@ -2,4 +2,6 @@
 <resources>
     <color name="backp">#000</color>
     <color name="text">#BFBFBF</color>
+
+    <color name="backs">#1F1F1F</color>
 </resources>

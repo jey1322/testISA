@@ -1340,6 +1340,7 @@ int color background_floating_material_light 0x7f05001e
 int color background_material_dark 0x7f05001f
 int color background_material_light 0x7f050020
 int color backp 0x7f0502e8
+int color backs 0x7f0502f0
 int color black 0x7f050021
 int color bright_foreground_disabled_material_dark 0x7f050022
 int color bright_foreground_disabled_material_light 0x7f050023
@@ -3021,6 +3022,7 @@ int drawable notification_template_icon_bg 0x7f0700df
 int drawable notification_template_icon_low_bg 0x7f0700e0
 int drawable notification_tile_bg 0x7f0700e1
 int drawable notify_panel_notification_icon_bg 0x7f0700e2
+int drawable recycler 0x7f0700e8
 int drawable test_level_drawable 0x7f0700e3
 int drawable tooltip_frame_dark 0x7f0700e4
 int drawable tooltip_frame_light 0x7f0700e5
@@ -3232,6 +3234,7 @@ int id graph_wrap 0x7f0800cb
 int id group_divider 0x7f0800cc
 int id grouping 0x7f0800cd
 int id groups 0x7f0800ce
+int id guideline 0x7f0801f5
 int id header_title 0x7f0800cf
 int id hide_ime_id 0x7f0800d0
 int id hideable 0x7f0800d1
@@ -3254,7 +3257,6 @@ int id inward 0x7f0800e1
 int id italic 0x7f0800e2
 int id item_touch_helper_previous_elevation 0x7f0800e3
 int id ivAdd 0x7f0801f0
-int id ivDark 0x7f0801f4
 int id jumpToEnd 0x7f0800e4
 int id jumpToStart 0x7f0800e5
 int id labeled 0x7f0800e6
@@ -3379,6 +3381,7 @@ int id right_icon 0x7f08015c
 int id right_side 0x7f08015d
 int id rounded 0x7f08015e
 int id row_index_key 0x7f08015f
+int id rvPropinas 0x7f0801f6
 int id save_non_transition_alpha 0x7f080160
 int id save_overlay_view 0x7f080161
 int id sawtooth 0x7f080162
@@ -3501,8 +3504,15 @@ int id transition_scene_layoutid_cache 0x7f0801d6
 int id transition_transform 0x7f0801d7
 int id triangle 0x7f0801d8
 int id tvAdd 0x7f0801f1
+int id tvComercio 0x7f0801f7
+int id tvDescuento 0x7f0801f8
+int id tvFecha 0x7f0801f9
 int id tvHome 0x7f0801f2
+int id tvMoneda 0x7f0801fa
+int id tvMonto 0x7f0801fb
 int id tvNew 0x7f0801f3
+int id tvTotal 0x7f0801fc
+int id tvTotalDesc 0x7f0801fd
 int id unchecked 0x7f0801d9
 int id uniform 0x7f0801da
 int id unlabeled 0x7f0801db
@@ -3715,6 +3725,7 @@ int layout notification_template_custom_big 0x7f0b0064
 int layout notification_template_icon_group 0x7f0b0065
 int layout notification_template_part_chronometer 0x7f0b0066
 int layout notification_template_part_time 0x7f0b0067
+int layout propinas_list 0x7f0b006c
 int layout select_dialog_item_material 0x7f0b0068
 int layout select_dialog_multichoice_material 0x7f0b0069
 int layout select_dialog_singlechoice_material 0x7f0b006a

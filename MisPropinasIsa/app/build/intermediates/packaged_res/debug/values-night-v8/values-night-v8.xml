@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="backp">#000</color>
+    <color name="backs">#1F1F1F</color>
     <color name="text">#BFBFBF</color>
     <style name="Base.Theme.MisPropinasISA" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
