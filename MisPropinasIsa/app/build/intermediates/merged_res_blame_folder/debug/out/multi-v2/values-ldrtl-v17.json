@@ -4,7 +4,7 @@
             "outputFile": "com.strainteam.mispropinasisa.app-mergeDebugResources-36:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jpaniagua\\.gradle\\caches\\transforms-3\\b84fd8e0913fbee5ea341511771bb46a\\transformed\\material-1.9.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "source": "C:\\Users\\jeyje\\.gradle\\caches\\transforms-3\\b84fd8e0913fbee5ea341511771bb46a\\transformed\\material-1.9.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

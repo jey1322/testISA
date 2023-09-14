@@ -2925,6 +2925,8 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable button
+drawable button_cancel
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3126,6 +3128,8 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnCancelar
+id btnGuardar
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3207,6 +3211,9 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id etMonto
+id etPropina
+id et_nombre_local
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3435,6 +3442,7 @@ id snackbar_text
 id snap
 id snapMargins
 id south
+id spMoneda
 id spacer
 id special_effects_controller_view_tag
 id spline
@@ -3512,8 +3520,11 @@ id tvHome
 id tvMoneda
 id tvMonto
 id tvNew
+id tvPropina
 id tvTotal
 id tvTotalDesc
+id tv_nombre_local
+id tv_titulo
 id unchecked
 id uniform
 id unlabeled
@@ -3730,6 +3741,7 @@ layout propinas_list
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout sheet_add_propina
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
