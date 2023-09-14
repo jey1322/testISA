@@ -107,8 +107,9 @@ class MainActivity : AppCompatActivity() {
                         "Total: $total\n" +
                         "Moneda: $moneda $codMoneda")
                 builder.setPositiveButton("Guardar"){ _, _ ->
-                    //historialViewModel.saveHistorial(binding2.etNombreLocal.text.toString(), subtotal, propinaPorcentaje, propina, total, fecha.format(System.currentTimeMillis()), moneda, codMoneda)
+                    historialViewModel.saveHistorial(binding2.etNombreLocal.text.toString(), subtotal, propinaPorcentaje, propina, total, fecha.format(System.currentTimeMillis()), moneda, codMoneda)
                     dialog.dismiss()
+                    historialViewModel.getNewHistorial()
                 }
                 builder.setNegativeButton("Cancelar"){ _, _ -> }
                 builder.show()

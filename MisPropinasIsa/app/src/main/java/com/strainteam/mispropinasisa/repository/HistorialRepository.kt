@@ -5,6 +5,7 @@ import android.database.Cursor
 import com.strainteam.mispropinasisa.model.HistorialList
 import com.strainteam.mispropinasisa.model.HistorialProvider
 import com.strainteam.mispropinasisa.sqliteHelper.DbHelper
+import com.strainteam.mispropinasisa.usecases.getHistorialUseCase
 
 class HistorialRepository(context: Context) {
     private val db = DbHelper(context = context, null)
@@ -14,6 +15,7 @@ class HistorialRepository(context: Context) {
     }
 
     fun getAllHistorial(): HistorialList{
+        HistorialProvider.historial = HistorialList(lista = emptyList())
         val cursor = getHistorial()
         if (cursor.moveToFirst()) {
             do {
@@ -42,5 +44,9 @@ class HistorialRepository(context: Context) {
             } while (cursor.moveToNext())
         }
         return HistorialProvider.historial
+    }
+
+    fun saveHistorial(nombreComer: String, subtotal: Double, propinaPorcentaje: String, propina: Double, total: Double, fecha: String, moneda: String, codMoneda: String) {
+        db.saveHistorial(nombreComer, subtotal, propinaPorcentaje, propina, total, fecha, moneda, codMoneda)
     }
 }

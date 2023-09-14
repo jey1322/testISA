@@ -17,4 +17,13 @@ class HistorialViewModel(application: Application): AndroidViewModel(application
         val result = getHistorialUseCase()
         historialList.postValue(result)
     }
+
+    fun saveHistorial(NombreComer: String, subtotal: Double, propinaPorcentaje: String, propina: Double, total: Double, fecha: String, moneda: String, codMoneda: String) {
+        getHistorialUseCase.saveHistorial(NombreComer, subtotal, propinaPorcentaje, propina, total, fecha, moneda, codMoneda)
+    }
+
+    fun getNewHistorial(){
+        val result = getHistorialUseCase.getNewHistorial()
+        historialList.postValue(result)
+    }
 }

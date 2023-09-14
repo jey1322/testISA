@@ -30,9 +30,9 @@ class DbHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): SQLite
                 + PROPINA_PORCENTAJE + " TEXT,"
                 + PROPINA + " REAL,"
                 + TOTAL + " REAL,"
-                + FECHA + " TEXT"
-                + MONEDA + "TEXT"
-                + IDMONEDA + "TEXT" + ")")
+                + FECHA + " TEXT,"
+                + MONEDA + " TEXT,"
+                + IDMONEDA + " TEXT" + ");")
         db?.execSQL(CREATE_TABLE)
     }
 
