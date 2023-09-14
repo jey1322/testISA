@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Fecha: 12/12/2020 12:12:00"
-            android:textColor="@color/text"
+            android:textColor="@color/celeste"
             android:textSize="13dp"
             android:fontFamily="@font/montserrat"
             android:id="@+id/tvFecha"
