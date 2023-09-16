@@ -55,8 +55,14 @@ class HistorialViewModel(application: Application): AndroidViewModel(application
     }
 
     fun getNewHistorial(){
-        val result = getHistorialUseCase.getNewHistorial()
-        historialList.postValue(result)
+        val result = getHistorialUseCase()
+        if(result.lista.isEmpty()) {
+            noData.postValue(true)
+            historialList.postValue(result)
+        }else{
+            noData.postValue(false)
+            historialList.postValue(result)
+        }
     }
 
     fun getOneHistorial(Id: String){
