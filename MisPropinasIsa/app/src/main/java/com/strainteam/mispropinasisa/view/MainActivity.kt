@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     private var nombre = ""
     private var monto = ""
     private var propinaPorcentaje = ""
+    private lateinit var dialog: BottomSheetDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -85,7 +86,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun mostrarSheet(){
-        val dialog = BottomSheetDialog(this)
+        dialog = BottomSheetDialog(this)
         val view = layoutInflater.inflate(R.layout.sheet_add_propina, null)
         val binding2 = SheetAddPropinaBinding.bind(view)
         dialog.setContentView(binding2.root)
@@ -126,10 +127,10 @@ class MainActivity : AppCompatActivity() {
         builder.setPositiveButton("Guardar"){ _, _ ->
             historialViewModel.enviarRegistro(nombre, monto, propinaPorcentaje, moneda, codMoneda)
             historialViewModel.getNewHistorial()
+            dialog.dismiss()
         }
         builder.setNegativeButton("Cancelar"){ _, _ -> }
         builder.show()
-        //dialog.dismiss()
     }
 
     private fun initRecycler(){
