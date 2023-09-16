@@ -44,13 +44,14 @@ id tvMon
 id tvMoneda
 id tvMonto
 id tvNew
+id tvNom
 id tvNombreLocal
 id tvPropina
 id tvTotal
 id tvTotalDesc
-id tv_fecha
 id tv_nombre_local
 id tv_titulo
+id tvfech
 layout activity_det_propina
 layout activity_main
 layout propinas_list

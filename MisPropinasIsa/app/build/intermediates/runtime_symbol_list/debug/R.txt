@@ -3523,13 +3523,14 @@ int id tvMon 0x7f0a01ea
 int id tvMoneda 0x7f0a01eb
 int id tvMonto 0x7f0a01ec
 int id tvNew 0x7f0a01ed
+int id tvNom 0x7f0a020c
 int id tvNombreLocal 0x7f0a01ee
 int id tvPropina 0x7f0a01ef
 int id tvTotal 0x7f0a01f0
 int id tvTotalDesc 0x7f0a01f1
-int id tv_fecha 0x7f0a01f2
 int id tv_nombre_local 0x7f0a01f3
 int id tv_titulo 0x7f0a01f4
+int id tvfech 0x7f0a020d
 int id unchecked 0x7f0a01f5
 int id uniform 0x7f0a01f6
 int id unlabeled 0x7f0a01f7

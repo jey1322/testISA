@@ -40,9 +40,6 @@ public final class ActivityDetPropinaBinding implements ViewBinding {
   public final TextView tvFecha;
 
   @NonNull
-  public final TextView tvFecha1;
-
-  @NonNull
   public final TextView tvMon;
 
   @NonNull
@@ -52,10 +49,10 @@ public final class ActivityDetPropinaBinding implements ViewBinding {
   public final TextView tvMonto;
 
   @NonNull
-  public final TextView tvNombreLocal;
+  public final TextView tvNom;
 
   @NonNull
-  public final TextView tvNombreLocal1;
+  public final TextView tvNombreLocal;
 
   @NonNull
   public final TextView tvTotal;
@@ -63,12 +60,15 @@ public final class ActivityDetPropinaBinding implements ViewBinding {
   @NonNull
   public final TextView tvTotalDesc;
 
+  @NonNull
+  public final TextView tvfech;
+
   private ActivityDetPropinaBinding(@NonNull CoordinatorLayout rootView,
       @NonNull MotionButton btnEditar, @NonNull MotionButton btnEliminar,
       @NonNull Guideline guideline, @NonNull Guideline guideline2, @NonNull TextView tvDescuento,
-      @NonNull TextView tvFecha, @NonNull TextView tvFecha1, @NonNull TextView tvMon,
-      @NonNull TextView tvMoneda, @NonNull TextView tvMonto, @NonNull TextView tvNombreLocal,
-      @NonNull TextView tvNombreLocal1, @NonNull TextView tvTotal, @NonNull TextView tvTotalDesc) {
+      @NonNull TextView tvFecha, @NonNull TextView tvMon, @NonNull TextView tvMoneda,
+      @NonNull TextView tvMonto, @NonNull TextView tvNom, @NonNull TextView tvNombreLocal,
+      @NonNull TextView tvTotal, @NonNull TextView tvTotalDesc, @NonNull TextView tvfech) {
     this.rootView = rootView;
     this.btnEditar = btnEditar;
     this.btnEliminar = btnEliminar;
@@ -76,14 +76,14 @@ public final class ActivityDetPropinaBinding implements ViewBinding {
     this.guideline2 = guideline2;
     this.tvDescuento = tvDescuento;
     this.tvFecha = tvFecha;
-    this.tvFecha1 = tvFecha1;
     this.tvMon = tvMon;
     this.tvMoneda = tvMoneda;
     this.tvMonto = tvMonto;
+    this.tvNom = tvNom;
     this.tvNombreLocal = tvNombreLocal;
-    this.tvNombreLocal1 = tvNombreLocal1;
     this.tvTotal = tvTotal;
     this.tvTotalDesc = tvTotalDesc;
+    this.tvfech = tvfech;
   }
 
   @Override
@@ -143,15 +143,9 @@ public final class ActivityDetPropinaBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tv_fecha;
+      id = R.id.tvFecha;
       TextView tvFecha = ViewBindings.findChildViewById(rootView, id);
       if (tvFecha == null) {
-        break missingId;
-      }
-
-      id = R.id.tvFecha;
-      TextView tvFecha1 = ViewBindings.findChildViewById(rootView, id);
-      if (tvFecha1 == null) {
         break missingId;
       }
 
@@ -173,15 +167,15 @@ public final class ActivityDetPropinaBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tv_nombre_local;
-      TextView tvNombreLocal = ViewBindings.findChildViewById(rootView, id);
-      if (tvNombreLocal == null) {
+      id = R.id.tvNom;
+      TextView tvNom = ViewBindings.findChildViewById(rootView, id);
+      if (tvNom == null) {
         break missingId;
       }
 
       id = R.id.tvNombreLocal;
-      TextView tvNombreLocal1 = ViewBindings.findChildViewById(rootView, id);
-      if (tvNombreLocal1 == null) {
+      TextView tvNombreLocal = ViewBindings.findChildViewById(rootView, id);
+      if (tvNombreLocal == null) {
         break missingId;
       }
 
@@ -197,9 +191,15 @@ public final class ActivityDetPropinaBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvfech;
+      TextView tvfech = ViewBindings.findChildViewById(rootView, id);
+      if (tvfech == null) {
+        break missingId;
+      }
+
       return new ActivityDetPropinaBinding((CoordinatorLayout) rootView, btnEditar, btnEliminar,
-          guideline, guideline2, tvDescuento, tvFecha, tvFecha1, tvMon, tvMoneda, tvMonto,
-          tvNombreLocal, tvNombreLocal1, tvTotal, tvTotalDesc);
+          guideline, guideline2, tvDescuento, tvFecha, tvMon, tvMoneda, tvMonto, tvNom,
+          tvNombreLocal, tvTotal, tvTotalDesc, tvfech);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

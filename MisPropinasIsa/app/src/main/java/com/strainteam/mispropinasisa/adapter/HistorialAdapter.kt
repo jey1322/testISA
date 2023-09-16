@@ -39,6 +39,13 @@ RecyclerView.Adapter<HistorialAdapter.HistorialViewHolder>(){
             binding.root.setOnClickListener {
                 val intent = Intent(context, DetPropina::class.java)
                 intent.putExtra("id", historial.id)
+                intent.putExtra("fecha",historial.fecha)
+                intent.putExtra("nombrelocal",historial.nombreComercio)
+                intent.putExtra("monto",historial.subtotal)
+                intent.putExtra("propina", historial.propinaPorcentaje)
+                intent.putExtra("montopropina",historial.propina)
+                intent.putExtra("total", historial.total)
+                intent.putExtra("moneda", "${historial.moneda} ${historial.idMoneda}")
                 context.startActivity(intent)
             }
         }

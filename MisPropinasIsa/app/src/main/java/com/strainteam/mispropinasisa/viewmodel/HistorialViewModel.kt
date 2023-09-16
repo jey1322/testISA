@@ -49,7 +49,7 @@ class HistorialViewModel(application: Application): AndroidViewModel(application
     }
     fun enviarRegistro(NombreComer: String, subtotal: String, propinaPorcentaje: String, moneda: String, codMoneda: String){
         val propina =(subtotal.toDouble() * propinaPorcentaje.toDouble())/100
-        val total = subtotal + propina
+        val total : Double = subtotal.toDouble() + propina
         val fecha = SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.getDefault()).format(System.currentTimeMillis())
         getHistorialUseCase.saveHistorial(NombreComer, subtotal.toDouble(), propinaPorcentaje, propina.toDouble(), total.toDouble(), fecha, moneda, codMoneda)
     }

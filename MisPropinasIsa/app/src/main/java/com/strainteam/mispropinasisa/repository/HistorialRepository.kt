@@ -2,6 +2,7 @@ package com.strainteam.mispropinasisa.repository
 
 import android.content.Context
 import android.database.Cursor
+import android.util.Log
 import com.strainteam.mispropinasisa.model.HistorialDetalle
 import com.strainteam.mispropinasisa.model.HistorialDetalleProvider
 import com.strainteam.mispropinasisa.model.HistorialList

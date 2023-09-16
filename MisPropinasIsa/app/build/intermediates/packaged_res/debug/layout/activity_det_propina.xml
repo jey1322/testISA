@@ -53,7 +53,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginHorizontal="20dp"
-            android:id="@+id/tv_nombre_local"/>
+            android:id="@+id/tvNom"/>
 
         <TextView
             android:layout_width="0dp"
@@ -62,7 +62,7 @@
             android:textColor="@color/text"
             android:textSize="13dp"
             android:fontFamily="@font/montserrat"
-            app:layout_constraintTop_toBottomOf="@id/tv_nombre_local"
+            app:layout_constraintTop_toBottomOf="@id/tvNom"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginHorizontal="20dp"
@@ -82,7 +82,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
-            android:id="@+id/tv_fecha"/>
+            android:id="@+id/tvfech"/>
 
         <TextView
             android:layout_width="0dp"
@@ -91,7 +91,7 @@
             android:textColor="@color/text"
             android:textSize="13dp"
             android:fontFamily="@font/montserrat"
-            app:layout_constraintTop_toBottomOf="@id/tv_fecha"
+            app:layout_constraintTop_toBottomOf="@id/tvfech"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginHorizontal="20dp"
