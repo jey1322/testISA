@@ -21,12 +21,7 @@ class DetPropina : AppCompatActivity() {
         historialViewModel.getOneHistorial(id)
 
         historialViewModel.getOneHist.observe(this, Observer {
-            binding.tvFecha.text = it.Data.fecha
             binding.tvNombreLocal.text = it.Data.nombreComercio
-            binding.tvMonto.text = "Monto: "+it.Data.subtotal.toString()
-            binding.tvDescuento.text = "Propina: ${it.Data.propinaPorcentaje}%"
-            binding.tvTotalDesc.text = "Monto Prop: ${it.Data.propina}"
-            binding.tvTotal.text = "Total: ${it.Data.total}"
             binding.tvMoneda.text = it.Data.moneda+" "+it.Data.idMoneda
         })
     }

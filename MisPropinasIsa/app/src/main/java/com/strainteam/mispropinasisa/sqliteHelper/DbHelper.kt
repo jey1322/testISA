@@ -66,8 +66,7 @@ class DbHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): SQLite
     fun getOneHistorial(Id: String): Cursor {
         val db = this.readableDatabase
         val query = "SELECT * FROM $TABLE_NAME WHERE $ID = $Id"
-        val cursor = db.rawQuery(query, null)
-        return cursor
+        return db.rawQuery(query, null)
     }
 
     fun updateOneHistorial (Id: String, nombreComercio: String, subtotal: Double, descuentoPorcentaje: String, descuento: Double, total: Double, fecha: String) {
