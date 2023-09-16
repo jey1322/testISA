@@ -70,7 +70,7 @@ class DbHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): SQLite
         return cursor
     }
 
-    fun updateOneHistorial (Id: String, nombreComercio: String, subtotal: Double, descuentoPorcentaje: String, descuento: Double, total: Double, fecha: String, moneda: String, idMoneda: String) {
+    fun updateOneHistorial (Id: String, nombreComercio: String, subtotal: Double, descuentoPorcentaje: String, descuento: Double, total: Double, fecha: String) {
         val db = this.writableDatabase
         val values = ContentValues()
         values.put(NOMBRE_COMERCIO, nombreComercio)
@@ -79,8 +79,6 @@ class DbHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): SQLite
         values.put(PROPINA, descuento)
         values.put(TOTAL, total)
         values.put(FECHA, fecha)
-        values.put(MONEDA, moneda)
-        values.put(IDMONEDA, idMoneda)
         db.update(TABLE_NAME, values, "$ID = ?", arrayOf(Id))
         db.close()
     }
