@@ -12,10 +12,17 @@ class HistorialViewModel(application: Application): AndroidViewModel(application
     private val context = getApplication<Application>().applicationContext
     val historialList = MutableLiveData<HistorialList>()
     var getHistorialUseCase = getHistorialUseCase(context)
+    var noData = MutableLiveData<Boolean>()
 
     fun onCreate(){
         val result = getHistorialUseCase()
-        historialList.postValue(result)
+        if(result.lista.isEmpty()) {
+            noData.postValue(true)
+            historialList.postValue(result)
+        }else{
+            noData.postValue(false)
+            historialList.postValue(result)
+        }
     }
 
     fun saveHistorial(NombreComer: String, subtotal: Double, propinaPorcentaje: String, propina: Double, total: Double, fecha: String, moneda: String, codMoneda: String) {

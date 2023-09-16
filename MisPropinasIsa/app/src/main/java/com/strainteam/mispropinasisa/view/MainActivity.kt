@@ -35,15 +35,17 @@ class MainActivity : AppCompatActivity() {
         historialViewModel.onCreate()
 
         historialViewModel.historialList.observe(this, Observer {
-            if(it.lista.isEmpty()){
+            mHistorial.clear()
+            mHistorial.addAll(it.lista)
+            adapter.notifyDataSetChanged()
+        })
+        historialViewModel.noData.observe(this, Observer {
+            if(it){
                 binding.ivAdd.visibility = View.VISIBLE
                 binding.tvAdd.visibility = View.VISIBLE
             }else{
                 binding.ivAdd.visibility = View.GONE
                 binding.tvAdd.visibility = View.GONE
-                mHistorial.clear()
-                mHistorial.addAll(it.lista)
-                adapter.notifyDataSetChanged()
             }
         })
 
