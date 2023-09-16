@@ -1,11 +1,13 @@
 package com.strainteam.mispropinasisa.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.strainteam.mispropinasisa.databinding.PropinasListBinding
 import com.strainteam.mispropinasisa.model.HistorialList
+import com.strainteam.mispropinasisa.view.DetPropina
 
 class HistorialAdapter(private val context: Context, private val mHistorial: List<HistorialList.Historial>, private val mRowLayout: Int):
 RecyclerView.Adapter<HistorialAdapter.HistorialViewHolder>(){
@@ -33,6 +35,12 @@ RecyclerView.Adapter<HistorialAdapter.HistorialViewHolder>(){
             binding.tvTotalDesc.text = "Monto Prop: ${historial.propina}"
             binding.tvTotal.text = "Total: ${historial.total}"
             binding.tvMoneda.text = historial.moneda+" "+historial.idMoneda
+
+            binding.root.setOnClickListener {
+                val intent = Intent(context, DetPropina::class.java)
+                intent.putExtra("id", historial.id)
+                context.startActivity(intent)
+            }
         }
     }
 }
