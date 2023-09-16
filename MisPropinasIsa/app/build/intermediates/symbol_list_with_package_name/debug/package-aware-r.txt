@@ -3129,6 +3129,8 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btnCancelar
+id btnEditar
+id btnEliminar
 id btnGuardar
 id buttonPanel
 id cache_measures
@@ -3243,6 +3245,7 @@ id group_divider
 id grouping
 id groups
 id guideline
+id guideline2
 id header_title
 id hide_ime_id
 id hideable
@@ -3517,12 +3520,15 @@ id tvComercio
 id tvDescuento
 id tvFecha
 id tvHome
+id tvMon
 id tvMoneda
 id tvMonto
 id tvNew
+id tvNombreLocal
 id tvPropina
 id tvTotal
 id tvTotalDesc
+id tv_fecha
 id tv_nombre_local
 id tv_titulo
 id unchecked

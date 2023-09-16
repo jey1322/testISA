@@ -4,25 +4,91 @@ package com.strainteam.mispropinasisa.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.utils.widget.MotionButton;
+import androidx.constraintlayout.widget.Guideline;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.strainteam.mispropinasisa.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityDetPropinaBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final CoordinatorLayout rootView;
 
-  private ActivityDetPropinaBinding(@NonNull LinearLayout rootView) {
+  @NonNull
+  public final MotionButton btnEditar;
+
+  @NonNull
+  public final MotionButton btnEliminar;
+
+  @NonNull
+  public final Guideline guideline;
+
+  @NonNull
+  public final Guideline guideline2;
+
+  @NonNull
+  public final TextView tvDescuento;
+
+  @NonNull
+  public final TextView tvFecha;
+
+  @NonNull
+  public final TextView tvFecha1;
+
+  @NonNull
+  public final TextView tvMon;
+
+  @NonNull
+  public final TextView tvMoneda;
+
+  @NonNull
+  public final TextView tvMonto;
+
+  @NonNull
+  public final TextView tvNombreLocal;
+
+  @NonNull
+  public final TextView tvNombreLocal1;
+
+  @NonNull
+  public final TextView tvTotal;
+
+  @NonNull
+  public final TextView tvTotalDesc;
+
+  private ActivityDetPropinaBinding(@NonNull CoordinatorLayout rootView,
+      @NonNull MotionButton btnEditar, @NonNull MotionButton btnEliminar,
+      @NonNull Guideline guideline, @NonNull Guideline guideline2, @NonNull TextView tvDescuento,
+      @NonNull TextView tvFecha, @NonNull TextView tvFecha1, @NonNull TextView tvMon,
+      @NonNull TextView tvMoneda, @NonNull TextView tvMonto, @NonNull TextView tvNombreLocal,
+      @NonNull TextView tvNombreLocal1, @NonNull TextView tvTotal, @NonNull TextView tvTotalDesc) {
     this.rootView = rootView;
+    this.btnEditar = btnEditar;
+    this.btnEliminar = btnEliminar;
+    this.guideline = guideline;
+    this.guideline2 = guideline2;
+    this.tvDescuento = tvDescuento;
+    this.tvFecha = tvFecha;
+    this.tvFecha1 = tvFecha1;
+    this.tvMon = tvMon;
+    this.tvMoneda = tvMoneda;
+    this.tvMonto = tvMonto;
+    this.tvNombreLocal = tvNombreLocal;
+    this.tvNombreLocal1 = tvNombreLocal1;
+    this.tvTotal = tvTotal;
+    this.tvTotalDesc = tvTotalDesc;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public CoordinatorLayout getRoot() {
     return rootView;
   }
 
@@ -43,10 +109,99 @@ public final class ActivityDetPropinaBinding implements ViewBinding {
 
   @NonNull
   public static ActivityDetPropinaBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.btnEditar;
+      MotionButton btnEditar = ViewBindings.findChildViewById(rootView, id);
+      if (btnEditar == null) {
+        break missingId;
+      }
 
-    return new ActivityDetPropinaBinding((LinearLayout) rootView);
+      id = R.id.btnEliminar;
+      MotionButton btnEliminar = ViewBindings.findChildViewById(rootView, id);
+      if (btnEliminar == null) {
+        break missingId;
+      }
+
+      id = R.id.guideline;
+      Guideline guideline = ViewBindings.findChildViewById(rootView, id);
+      if (guideline == null) {
+        break missingId;
+      }
+
+      id = R.id.guideline2;
+      Guideline guideline2 = ViewBindings.findChildViewById(rootView, id);
+      if (guideline2 == null) {
+        break missingId;
+      }
+
+      id = R.id.tvDescuento;
+      TextView tvDescuento = ViewBindings.findChildViewById(rootView, id);
+      if (tvDescuento == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_fecha;
+      TextView tvFecha = ViewBindings.findChildViewById(rootView, id);
+      if (tvFecha == null) {
+        break missingId;
+      }
+
+      id = R.id.tvFecha;
+      TextView tvFecha1 = ViewBindings.findChildViewById(rootView, id);
+      if (tvFecha1 == null) {
+        break missingId;
+      }
+
+      id = R.id.tvMon;
+      TextView tvMon = ViewBindings.findChildViewById(rootView, id);
+      if (tvMon == null) {
+        break missingId;
+      }
+
+      id = R.id.tvMoneda;
+      TextView tvMoneda = ViewBindings.findChildViewById(rootView, id);
+      if (tvMoneda == null) {
+        break missingId;
+      }
+
+      id = R.id.tvMonto;
+      TextView tvMonto = ViewBindings.findChildViewById(rootView, id);
+      if (tvMonto == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_nombre_local;
+      TextView tvNombreLocal = ViewBindings.findChildViewById(rootView, id);
+      if (tvNombreLocal == null) {
+        break missingId;
+      }
+
+      id = R.id.tvNombreLocal;
+      TextView tvNombreLocal1 = ViewBindings.findChildViewById(rootView, id);
+      if (tvNombreLocal1 == null) {
+        break missingId;
+      }
+
+      id = R.id.tvTotal;
+      TextView tvTotal = ViewBindings.findChildViewById(rootView, id);
+      if (tvTotal == null) {
+        break missingId;
+      }
+
+      id = R.id.tvTotalDesc;
+      TextView tvTotalDesc = ViewBindings.findChildViewById(rootView, id);
+      if (tvTotalDesc == null) {
+        break missingId;
+      }
+
+      return new ActivityDetPropinaBinding((CoordinatorLayout) rootView, btnEditar, btnEliminar,
+          guideline, guideline2, tvDescuento, tvFecha, tvFecha1, tvMon, tvMoneda, tvMonto,
+          tvNombreLocal, tvNombreLocal1, tvTotal, tvTotalDesc);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

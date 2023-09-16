@@ -3128,6 +3128,8 @@ int id bounceBoth 0x7f0a005f
 int id bounceEnd 0x7f0a0060
 int id bounceStart 0x7f0a0061
 int id btnCancelar 0x7f0a0062
+int id btnEditar 0x7f0a0209
+int id btnEliminar 0x7f0a020a
 int id btnGuardar 0x7f0a0063
 int id buttonPanel 0x7f0a0064
 int id cache_measures 0x7f0a0065
@@ -3242,6 +3244,7 @@ int id group_divider 0x7f0a00d1
 int id grouping 0x7f0a00d2
 int id groups 0x7f0a00d3
 int id guideline 0x7f0a00d4
+int id guideline2 0x7f0a020b
 int id header_title 0x7f0a00d5
 int id hide_ime_id 0x7f0a00d6
 int id hideable 0x7f0a00d7
@@ -3516,12 +3519,15 @@ int id tvComercio 0x7f0a01e3
 int id tvDescuento 0x7f0a01e4
 int id tvFecha 0x7f0a01e5
 int id tvHome 0x7f0a01e6
+int id tvMon 0x7f0a0206
 int id tvMoneda 0x7f0a01e7
 int id tvMonto 0x7f0a01e8
 int id tvNew 0x7f0a01e9
+int id tvNombreLocal 0x7f0a0207
 int id tvPropina 0x7f0a01ea
 int id tvTotal 0x7f0a01eb
 int id tvTotalDesc 0x7f0a01ec
+int id tv_fecha 0x7f0a0208
 int id tv_nombre_local 0x7f0a01ed
 int id tv_titulo 0x7f0a01ee
 int id unchecked 0x7f0a01ef
