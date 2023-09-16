@@ -5,6 +5,7 @@ import android.content.Context
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.strainteam.mispropinasisa.model.HistorialDetalle
 import com.strainteam.mispropinasisa.model.HistorialList
 import com.strainteam.mispropinasisa.usecases.getHistorialUseCase
 import java.text.SimpleDateFormat
@@ -12,13 +13,14 @@ import java.util.Locale
 
 class HistorialViewModel(application: Application): AndroidViewModel(application) {
     private val context = getApplication<Application>().applicationContext
-    val historialList = MutableLiveData<HistorialList>()
     var getHistorialUseCase = getHistorialUseCase(context)
+    val historialList = MutableLiveData<HistorialList>()
     var valorPropina = MutableLiveData<Double>()
     var valorTotal = MutableLiveData<String>()
     var noData = MutableLiveData<Boolean>()
     var error = MutableLiveData<Boolean>()
     var errorProp = MutableLiveData<Boolean>()
+    var getOneHist = MutableLiveData<HistorialDetalle>()
 
     fun onCreate(){
         val result = getHistorialUseCase()
@@ -55,5 +57,10 @@ class HistorialViewModel(application: Application): AndroidViewModel(application
     fun getNewHistorial(){
         val result = getHistorialUseCase.getNewHistorial()
         historialList.postValue(result)
+    }
+
+    fun getOneHistorial(Id: String){
+        val result = getHistorialUseCase.getOneHistorial(Id)
+        getOneHist.postValue(result)
     }
 }

@@ -1,6 +1,7 @@
 package com.strainteam.mispropinasisa.usecases
 
 import android.content.Context
+import com.strainteam.mispropinasisa.model.HistorialDetalle
 import com.strainteam.mispropinasisa.repository.HistorialRepository
 
 class getHistorialUseCase (context: Context){
@@ -11,4 +12,6 @@ class getHistorialUseCase (context: Context){
         repository.saveHistorial(nombreComer, subtotal, propinaPorcentaje, propina, total, fecha, moneda, codMoneda)
     }
     fun getNewHistorial() = repository.getAllHistorial()
+
+    fun getOneHistorial(Id: String): HistorialDetalle = repository.getOneHistorial(Id)
 }
