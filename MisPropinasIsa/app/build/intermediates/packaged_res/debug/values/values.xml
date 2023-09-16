@@ -18,7 +18,7 @@
         <item>@font/montserrat</item>
     </array>
     <color name="backp">#fff</color>
-    <color name="backs">#F1F1F1</color>
+    <color name="backs">#F6F6F6</color>
     <color name="black">#FF000000</color>
     <color name="celeste">#0EA6AF</color>
     <color name="purple_200">#0EA6AF</color>

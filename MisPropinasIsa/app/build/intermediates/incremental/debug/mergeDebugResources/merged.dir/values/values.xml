@@ -654,7 +654,7 @@
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
     <color name="backp">#fff</color>
-    <color name="backs">#F1F1F1</color>
+    <color name="backs">#F6F6F6</color>
     <color name="black">#FF000000</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
