@@ -28,6 +28,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.MisPropinasISA" >
         <activity
+            android:name="com.strainteam.mispropinasisa.view.DetPropina"
+            android:exported="false" />
+        <activity
             android:name="com.strainteam.mispropinasisa.view.MainActivity"
             android:exported="true" >
             <intent-filter>

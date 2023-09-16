@@ -45,6 +45,7 @@ id tvTotal
 id tvTotalDesc
 id tv_nombre_local
 id tv_titulo
+layout activity_det_propina
 layout activity_main
 layout propinas_list
 layout sheet_add_propina

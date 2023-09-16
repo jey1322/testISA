@@ -26,6 +26,13 @@ class MainActivity : AppCompatActivity() {
     private val historialViewModel: HistorialViewModel by viewModels()
     private var mHistorial : MutableList<HistorialList.Historial> = ArrayList()
     private lateinit var adapter : HistorialAdapter
+    private var propina = 0.0
+    private var total = ""
+    private var moneda = ""
+    private var codMoneda = ""
+    private var nombre = ""
+    private var monto = ""
+    private var propinaPorcentaje = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,6 +54,23 @@ class MainActivity : AppCompatActivity() {
                 binding.ivAdd.visibility = View.GONE
                 binding.tvAdd.visibility = View.GONE
             }
+        })
+        historialViewModel.error.observe(this, Observer {
+            if(it){
+                Toast.makeText(this, "Error debe llenar los campos correctamente", Toast.LENGTH_SHORT).show()
+            }
+        })
+        historialViewModel.errorProp.observe(this, Observer {
+            if(it){
+                Toast.makeText(this, "Error el porcentaje de propina no puede ser mayor al 100%", Toast.LENGTH_SHORT).show()
+            }
+        })
+        historialViewModel.valorPropina.observe(this, Observer {
+            propina = it
+        })
+        historialViewModel.valorTotal.observe(this, Observer {
+            total = it
+            confirmar()
         })
 
         binding.tvNew.setOnClickListener {
@@ -73,8 +97,6 @@ class MainActivity : AppCompatActivity() {
         monedasList.add("Cordobas - NIO")
         monedasList.add("Dolares - USD")
         monedasList.add("Euros - EUR")
-        var moneda = ""
-        var codMoneda = ""
         binding2.spMoneda.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, monedasList)
         binding2.spMoneda.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -87,37 +109,27 @@ class MainActivity : AppCompatActivity() {
             }
         }
         binding2.btnGuardar.setOnClickListener {
-            if(binding2.etNombreLocal.text.toString().isEmpty() || binding2.etMonto.text.toString().isEmpty() || binding2.etPropina.text.toString().isEmpty()) {
-                Toast.makeText(this, "Complete todos los campos", Toast.LENGTH_SHORT).show()
-            }else if(binding2.etPropina.text.toString().toDouble() > 100) {
-                binding2.etPropina.error = "El porcentaje de propina no puede ser mayor al 100%"
-                binding2.etPropina.requestFocus()
-            }else{
-                val subtotal = binding2.etMonto.text.toString().toDouble()
-                val propinaPorcentaje = binding2.etPropina.text.toString()
-                val propina = (subtotal * propinaPorcentaje.toDouble()) / 100
-                val total = subtotal + propina
-                val fecha = SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.getDefault())
-                val builder = MaterialAlertDialogBuilder(this)
-                builder.background = getDrawable(R.drawable.recycler)
-                builder.setTitle("Confirmar")
-                builder.setMessage("¿Desea guardar esta propina?\n" +
-                        "Nombre del local: ${binding2.etNombreLocal.text}\n" +
-                        "Subtotal: $subtotal\n" +
-                        "Propina: $propinaPorcentaje%\n" +
-                        "Monto propina: $propina\n" +
-                        "Total: $total\n" +
-                        "Moneda: $moneda $codMoneda")
-                builder.setPositiveButton("Guardar"){ _, _ ->
-                    historialViewModel.saveHistorial(binding2.etNombreLocal.text.toString(), subtotal, propinaPorcentaje, propina, total, fecha.format(System.currentTimeMillis()), moneda, codMoneda)
-                    dialog.dismiss()
-                    historialViewModel.getNewHistorial()
-                }
-                builder.setNegativeButton("Cancelar"){ _, _ -> }
-                builder.show()
-            }
+            nombre = binding2.etNombreLocal.text.toString()
+            monto = binding2.etMonto.text.toString()
+            propinaPorcentaje = binding2.etPropina.text.toString()
+            historialViewModel.validarData(nombre, monto, propinaPorcentaje, moneda, codMoneda)
         }
+    }
 
+    private fun confirmar(){
+        val builder = MaterialAlertDialogBuilder(this)
+        builder.background = getDrawable(R.drawable.recycler)
+        builder.setTitle("Confirmar")
+        builder.setMessage("¿Desea guardar esta propina?\n" +
+                "Monto propina: $propina\n" +
+                "Total a pagar: $total\n")
+        builder.setPositiveButton("Guardar"){ _, _ ->
+            historialViewModel.enviarRegistro(nombre, monto, propinaPorcentaje, moneda, codMoneda)
+            historialViewModel.getNewHistorial()
+        }
+        builder.setNegativeButton("Cancelar"){ _, _ -> }
+        builder.show()
+        //dialog.dismiss()
     }
 
     private fun initRecycler(){
