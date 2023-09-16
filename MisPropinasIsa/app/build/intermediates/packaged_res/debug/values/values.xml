@@ -21,11 +21,11 @@
     <color name="backs">#F1F1F1</color>
     <color name="black">#FF000000</color>
     <color name="celeste">#0EA6AF</color>
-    <color name="purple_200">#FFC6C5</color>
-    <color name="purple_500">#FFC6C5</color>
-    <color name="purple_700">#FFC6C5</color>
-    <color name="teal_200">#FFC6C5</color>
-    <color name="teal_700">#FFC6C5</color>
+    <color name="purple_200">#0EA6AF</color>
+    <color name="purple_500">#0EA6AF</color>
+    <color name="purple_700">#0EA6AF</color>
+    <color name="teal_200">#0EA6AF</color>
+    <color name="teal_700">#0EA6AF</color>
     <color name="text">#565656</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Mis Propinas ISA</string>
