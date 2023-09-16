@@ -85,4 +85,10 @@ class DbHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): SQLite
         db.close()
     }
 
+    fun deleteOneHistorial (Id: String) {
+        val db = this.writableDatabase
+        db.delete(TABLE_NAME, "$ID = ?", arrayOf(Id))
+        db.close()
+    }
+
 }
