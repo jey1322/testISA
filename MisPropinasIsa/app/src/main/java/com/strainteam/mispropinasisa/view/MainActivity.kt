@@ -97,7 +97,6 @@ class MainActivity : AppCompatActivity() {
         val monedasList = ArrayList<String>()
         monedasList.add("Cordobas - NIO")
         monedasList.add("Dolares - USD")
-        monedasList.add("Euros - EUR")
         binding2.spMoneda.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, monedasList)
         binding2.spMoneda.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onNothingSelected(parent: AdapterView<*>?) {
