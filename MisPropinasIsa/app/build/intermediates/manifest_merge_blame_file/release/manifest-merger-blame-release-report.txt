@@ -30,12 +30,12 @@
 21        android:extractNativeLibs="false"
 22        android:fullBackupContent="@xml/backup_rules"
 22-->C:\Users\jeyje\Documents\GitHub\testISA\MisPropinasIsa\app\src\main\AndroidManifest.xml:8:9-54
-23        android:icon="@mipmap/ic_launcher"
-23-->C:\Users\jeyje\Documents\GitHub\testISA\MisPropinasIsa\app\src\main\AndroidManifest.xml:9:9-43
+23        android:icon="@mipmap/ic_launcherfin"
+23-->C:\Users\jeyje\Documents\GitHub\testISA\MisPropinasIsa\app\src\main\AndroidManifest.xml:9:9-46
 24        android:label="@string/app_name"
 24-->C:\Users\jeyje\Documents\GitHub\testISA\MisPropinasIsa\app\src\main\AndroidManifest.xml:10:9-41
-25        android:roundIcon="@mipmap/ic_launcher_round"
-25-->C:\Users\jeyje\Documents\GitHub\testISA\MisPropinasIsa\app\src\main\AndroidManifest.xml:11:9-54
+25        android:roundIcon="@mipmap/ic_launcherfin_round"
+25-->C:\Users\jeyje\Documents\GitHub\testISA\MisPropinasIsa\app\src\main\AndroidManifest.xml:11:9-57
 26        android:supportsRtl="true"
 26-->C:\Users\jeyje\Documents\GitHub\testISA\MisPropinasIsa\app\src\main\AndroidManifest.xml:12:9-35
 27        android:theme="@style/Theme.MisPropinasISA" >
