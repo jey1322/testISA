@@ -1,0 +1,4 @@
+#Sat Sep 16 21:23:56 CST 2023
+base.0=C\:\\Users\\jeyje\\Documents\\GitHub\\testISA\\MisPropinasIsa\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.strainteam.mispropinasisa.app-mergeReleaseResources-37:/layout/edit_propina.xml",
+        "source": "com.strainteam.mispropinasisa.app-main-39:/layout/edit_propina.xml"
+    },
+    {
+        "merged": "com.strainteam.mispropinasisa.app-mergeReleaseResources-37:/layout/propinas_list.xml",
+        "source": "com.strainteam.mispropinasisa.app-main-39:/layout/propinas_list.xml"
+    },
+    {
+        "merged": "com.strainteam.mispropinasisa.app-mergeReleaseResources-37:/layout/activity_main.xml",
+        "source": "com.strainteam.mispropinasisa.app-main-39:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.strainteam.mispropinasisa.app-mergeReleaseResources-37:/layout/sheet_add_propina.xml",
+        "source": "com.strainteam.mispropinasisa.app-main-39:/layout/sheet_add_propina.xml"
+    },
+    {
+        "merged": "com.strainteam.mispropinasisa.app-mergeReleaseResources-37:/layout/activity_det_propina.xml",
+        "source": "com.strainteam.mispropinasisa.app-main-39:/layout/activity_det_propina.xml"
+    }
+]
