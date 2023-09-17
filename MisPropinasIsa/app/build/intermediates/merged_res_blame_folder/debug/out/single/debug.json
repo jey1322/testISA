@@ -20,10 +20,6 @@
         "source": "C:\\Users\\jeyje\\.gradle\\daemon\\8.0\\com.strainteam.mispropinasisa.app-main-40:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.strainteam.mispropinasisa.app-merged_res-38:/layout_activity_det_propina.xml.flat",
-        "source": "com.strainteam.mispropinasisa.app-main-40:/layout/activity_det_propina.xml"
-    },
-    {
         "merged": "C:\\Users\\jeyje\\.gradle\\daemon\\8.0\\com.strainteam.mispropinasisa.app-merged_res-38:\\drawable_button.xml.flat",
         "source": "C:\\Users\\jeyje\\.gradle\\daemon\\8.0\\com.strainteam.mispropinasisa.app-main-40:\\drawable\\button.xml"
     },
@@ -74,6 +70,10 @@
     {
         "merged": "C:\\Users\\jeyje\\.gradle\\daemon\\8.0\\com.strainteam.mispropinasisa.app-merged_res-38:\\font_montserrat.xml.flat",
         "source": "C:\\Users\\jeyje\\.gradle\\daemon\\8.0\\com.strainteam.mispropinasisa.app-main-40:\\font\\montserrat.xml"
+    },
+    {
+        "merged": "com.strainteam.mispropinasisa.app-merged_res-38:/layout_sheet_add_propina.xml.flat",
+        "source": "com.strainteam.mispropinasisa.app-main-40:/layout/sheet_add_propina.xml"
     },
     {
         "merged": "C:\\Users\\jeyje\\.gradle\\daemon\\8.0\\com.strainteam.mispropinasisa.app-merged_res-38:\\mipmap-anydpi-v26_ic_launcher.xml.flat",

@@ -83,4 +83,8 @@ class HistorialRepository(context: Context) {
         }
         return HistorialDetalleProvider.historialDetalle
     }
+
+    fun deleteHistorial(id: String) {
+        db.deleteOneHistorial(id)
+    }
 }

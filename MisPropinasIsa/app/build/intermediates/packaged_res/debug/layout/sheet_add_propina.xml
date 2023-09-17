@@ -92,7 +92,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Propina"
+                    android:text="Porcentaje propina"
                     android:textColor="@color/text"
                     android:textSize="15dp"
                     android:fontFamily="@font/montserrat"

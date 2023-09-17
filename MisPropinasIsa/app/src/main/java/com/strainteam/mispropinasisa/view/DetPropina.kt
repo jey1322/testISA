@@ -1,10 +1,12 @@
 package com.strainteam.mispropinasisa.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.strainteam.mispropinasisa.R
 import com.strainteam.mispropinasisa.databinding.ActivityDetPropinaBinding
 import com.strainteam.mispropinasisa.viewmodel.HistorialViewModel
@@ -29,6 +31,21 @@ class DetPropina : AppCompatActivity() {
             binding.tvTotalDesc.text = "Monto Prop: ${it.Data.propina}"
             binding.tvTotal.text = "Total: ${it.Data.total}"
         })
+
+        binding.btnEliminar.setOnClickListener {
+            val builder = MaterialAlertDialogBuilder(this)
+            builder.background = getDrawable(R.drawable.recycler)
+            builder.setTitle("Desea eliminar este registro?")
+            builder.setMessage("Si elimina, no podrá recuperar este dato")
+            builder.setPositiveButton("Guardar"){ _, _ ->
+                historialViewModel.deleteHistorial(id)
+                val intent = Intent(this, MainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                startActivity(intent)
+            }
+            builder.setNegativeButton("Cancelar"){ _, _ -> }
+            builder.show()
+        }
 
     }
 }

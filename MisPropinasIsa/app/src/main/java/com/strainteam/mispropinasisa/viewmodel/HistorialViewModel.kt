@@ -69,4 +69,8 @@ class HistorialViewModel(application: Application): AndroidViewModel(application
         val result = getHistorialUseCase.getOneHistorial(Id)
         getOneHist.postValue(result)
     }
+
+    fun deleteHistorial(id: String) {
+        getHistorialUseCase.deleteHistorial(id)
+    }
 }

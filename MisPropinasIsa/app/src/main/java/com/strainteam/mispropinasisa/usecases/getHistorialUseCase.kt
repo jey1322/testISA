@@ -14,4 +14,7 @@ class getHistorialUseCase (context: Context){
     fun getNewHistorial() = repository.getAllHistorial()
 
     fun getOneHistorial(Id: String): HistorialDetalle = repository.getOneHistorial(Id)
+    fun deleteHistorial(id: String) {
+        repository.deleteHistorial(id)
+    }
 }
