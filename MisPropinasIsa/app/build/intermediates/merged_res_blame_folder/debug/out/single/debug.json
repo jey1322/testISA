@@ -92,10 +92,6 @@
         "source": "C:\\Users\\jeyje\\.gradle\\daemon\\8.0\\com.strainteam.mispropinasisa.app-main-40:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.strainteam.mispropinasisa.app-merged_res-38:/layout_edit_propina.xml.flat",
-        "source": "com.strainteam.mispropinasisa.app-main-40:/layout/edit_propina.xml"
-    },
-    {
         "merged": "C:\\Users\\jeyje\\.gradle\\daemon\\8.0\\com.strainteam.mispropinasisa.app-merged_res-38:\\drawable_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\jeyje\\.gradle\\daemon\\8.0\\com.strainteam.mispropinasisa.app-main-40:\\drawable\\ic_launcher_foreground.xml"
     },
@@ -110,5 +106,9 @@
     {
         "merged": "C:\\Users\\jeyje\\.gradle\\daemon\\8.0\\com.strainteam.mispropinasisa.app-merged_res-38:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\jeyje\\.gradle\\daemon\\8.0\\com.strainteam.mispropinasisa.app-main-40:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.strainteam.mispropinasisa.app-merged_res-38:/layout_activity_main.xml.flat",
+        "source": "com.strainteam.mispropinasisa.app-main-40:/layout/activity_main.xml"
     }
 ]

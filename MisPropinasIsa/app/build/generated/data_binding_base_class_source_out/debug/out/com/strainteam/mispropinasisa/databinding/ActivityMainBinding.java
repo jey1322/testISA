@@ -4,6 +4,7 @@ package com.strainteam.mispropinasisa.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -22,6 +23,9 @@ public final class ActivityMainBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final EditText etSearch;
+
+  @NonNull
   public final ImageView ivAdd;
 
   @NonNull
@@ -36,10 +40,11 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final TextView tvNew;
 
-  private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull ImageView ivAdd,
-      @NonNull RecyclerView rvPropinas, @NonNull TextView tvAdd, @NonNull TextView tvHome,
-      @NonNull TextView tvNew) {
+  private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull EditText etSearch,
+      @NonNull ImageView ivAdd, @NonNull RecyclerView rvPropinas, @NonNull TextView tvAdd,
+      @NonNull TextView tvHome, @NonNull TextView tvNew) {
     this.rootView = rootView;
+    this.etSearch = etSearch;
     this.ivAdd = ivAdd;
     this.rvPropinas = rvPropinas;
     this.tvAdd = tvAdd;
@@ -74,6 +79,12 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.etSearch;
+      EditText etSearch = ViewBindings.findChildViewById(rootView, id);
+      if (etSearch == null) {
+        break missingId;
+      }
+
       id = R.id.ivAdd;
       ImageView ivAdd = ViewBindings.findChildViewById(rootView, id);
       if (ivAdd == null) {
@@ -104,8 +115,8 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((LinearLayout) rootView, ivAdd, rvPropinas, tvAdd, tvHome,
-          tvNew);
+      return new ActivityMainBinding((LinearLayout) rootView, etSearch, ivAdd, rvPropinas, tvAdd,
+          tvHome, tvNew);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

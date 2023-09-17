@@ -8,6 +8,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -82,6 +83,16 @@ class MainActivity : AppCompatActivity() {
         }
         binding.tvAdd.setOnClickListener {
             mostrarSheet()
+        }
+
+        binding.etSearch.addTextChangedListener { busq ->
+            val fecha = mHistorial.filter { sol -> sol.fecha.lowercase().contains(busq.toString().lowercase()) }
+            val nombre = mHistorial.filter { sol -> sol.nombreComercio.lowercase().contains(busq.toString().lowercase()) }
+            if(busq.toString().isEmpty()){
+                adapter.updateList(mHistorial)
+            } else{
+                adapter.updateList(fecha + nombre)
+            }
         }
     }
 

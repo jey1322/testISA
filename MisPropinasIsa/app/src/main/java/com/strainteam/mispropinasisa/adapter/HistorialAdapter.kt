@@ -9,7 +9,7 @@ import com.strainteam.mispropinasisa.databinding.PropinasListBinding
 import com.strainteam.mispropinasisa.model.HistorialList
 import com.strainteam.mispropinasisa.view.DetPropina
 
-class HistorialAdapter(private val context: Context, private val mHistorial: List<HistorialList.Historial>, private val mRowLayout: Int):
+class HistorialAdapter(private val context: Context, private var mHistorial: List<HistorialList.Historial>, private val mRowLayout: Int):
 RecyclerView.Adapter<HistorialAdapter.HistorialViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HistorialViewHolder {
@@ -24,6 +24,11 @@ RecyclerView.Adapter<HistorialAdapter.HistorialViewHolder>(){
 
     override fun getItemCount(): Int {
         return mHistorial.size
+    }
+
+    fun updateList(mHistoria: List<HistorialList.Historial>) {
+        this.mHistorial = mHistoria
+        notifyDataSetChanged()
     }
 
     inner class HistorialViewHolder(val binding: PropinasListBinding): RecyclerView.ViewHolder(binding.root){

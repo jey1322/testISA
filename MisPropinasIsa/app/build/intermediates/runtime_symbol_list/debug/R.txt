@@ -3214,6 +3214,7 @@ int id enterAlways 0x7f0a00b5
 int id enterAlwaysCollapsed 0x7f0a00b6
 int id etMonto 0x7f0a00b7
 int id etPropina 0x7f0a00b8
+int id etSearch 0x7f0a020e
 int id et_nombre_local 0x7f0a00b9
 int id exitUntilCollapsed 0x7f0a00ba
 int id expand_activities_button 0x7f0a00bb

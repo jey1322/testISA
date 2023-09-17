@@ -3215,6 +3215,7 @@ id enterAlways
 id enterAlwaysCollapsed
 id etMonto
 id etPropina
+id etSearch
 id et_nombre_local
 id exitUntilCollapsed
 id expand_activities_button

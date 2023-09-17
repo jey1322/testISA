@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ing. San Antonio"
+            android:text="Ser San Antonio"
             android:textColor="@color/text"
             android:textSize="25dp"
             android:textStyle="bold"
@@ -31,6 +31,24 @@
         android:layout_width="match_parent"
         android:layout_marginTop="20dp"
         android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/recycler"
+            android:textColor="@color/text"
+            android:textSize="13dp"
+            android:hint="Buscar registro"
+            android:fontFamily="@font/montserrat"
+            android:paddingHorizontal="10dp"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="20dp"
+            android:imeOptions="actionDone"
+            android:id="@+id/etSearch"/>
 
         <TextView
             android:layout_width="0dp"
@@ -53,12 +71,16 @@
             android:layout_height="25dp"
             android:text="Nueva propina"
             android:gravity="center"
+            android:inputType="text"
+            android:imeOptions="actionNone"
+            android:maxLines="1"
             android:paddingHorizontal="10dp"
             android:textColor="@color/celeste"
             android:textSize="13dp"
             android:background="@drawable/recycler"
             android:fontFamily="@font/montserrat"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etSearch"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
             android:id="@+id/tvNew"/>

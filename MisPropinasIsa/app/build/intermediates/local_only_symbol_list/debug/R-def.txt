@@ -29,6 +29,7 @@ id btnEliminar
 id btnGuardar
 id etMonto
 id etPropina
+id etSearch
 id et_nombre_local
 id guideline
 id guideline2
