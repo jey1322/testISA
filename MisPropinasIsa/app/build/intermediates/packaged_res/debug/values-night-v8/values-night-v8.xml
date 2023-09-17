@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="backp">#000</color>
+    <color name="backs">#1F1F1F</color>
+    <color name="text">#BFBFBF</color>
+    <style name="Base.Theme.MisPropinasISA" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        
+        
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <item name="android:statusBarColor">@color/backp</item>
+    </style>
+</resources>

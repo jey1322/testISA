@@ -1,0 +1,6 @@
+com.strainteam.mispropinasisa.test.app-core-1.5.0-0 C:\Users\jeyje\.gradle\caches\transforms-3\4b1f0787700ccd7ac6c94a26acbfa747\transformed\core-1.5.0\res
+com.strainteam.mispropinasisa.test.app-annotation-experimental-1.3.0-1 C:\Users\jeyje\.gradle\caches\transforms-3\70d510d1ea77f94adf002972dd3d1d16\transformed\annotation-experimental-1.3.0\res
+com.strainteam.mispropinasisa.test.app-androidTest-2 C:\Users\jeyje\Documents\GitHub\testISA\MisPropinasIsa\app\build\generated\res\resValues\androidTest\debug
+com.strainteam.mispropinasisa.test.app-mergeDebugAndroidTestResources-3 C:\Users\jeyje\Documents\GitHub\testISA\MisPropinasIsa\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.strainteam.mispropinasisa.test.app-mergeDebugAndroidTestResources-4 C:\Users\jeyje\Documents\GitHub\testISA\MisPropinasIsa\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.strainteam.mispropinasisa.test.app-merged_res-5 C:\Users\jeyje\Documents\GitHub\testISA\MisPropinasIsa\app\build\intermediates\merged_res\debugAndroidTest

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backp"
+    tools:context=".view.DetPropina">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detalle del registro"
+            android:textColor="@color/text"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Nombre del local:"
+            android:textColor="@color/text"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"
+            android:id="@+id/tvNom"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Libreria y variedades divio nio chichigalpa chinandega"
+            android:textColor="@color/text"
+            android:textSize="13dp"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintTop_toBottomOf="@id/tvNom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tvNombreLocal"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Fecha de Creación"
+            android:textColor="@color/text"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintTop_toBottomOf="@id/tvNombreLocal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/tvfech"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="22/02/2000 12:23:00"
+            android:textColor="@color/text"
+            android:textSize="13dp"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintTop_toBottomOf="@id/tvfech"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tvFecha"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Moneda"
+            android:textColor="@color/text"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintTop_toBottomOf="@+id/tvFecha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/tvMon"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Cordobas NIO"
+            android:textColor="@color/text"
+            android:textSize="13dp"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintTop_toBottomOf="@id/tvMon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tvMoneda"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvMoneda"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/recycler"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Monto: 1000"
+                android:textColor="@color/text"
+                android:textSize="15dp"
+                android:fontFamily="@font/montserrat"
+                android:id="@+id/tvMonto"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Propina: 20%"
+                android:textColor="@color/text"
+                android:textSize="15dp"
+                android:fontFamily="@font/montserrat"
+                android:id="@+id/tvDescuento"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Total Prop: 120"
+                android:textColor="@color/text"
+                android:textSize="15dp"
+                android:fontFamily="@font/montserrat"
+                android:id="@+id/tvTotalDesc"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintTop_toBottomOf="@id/tvMonto"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Total: 1200"
+                android:textColor="@color/text"
+                android:textSize="15dp"
+                android:fontFamily="@font/montserrat"
+                android:id="@+id/tvTotal"
+                app:layout_constraintTop_toBottomOf="@id/tvMonto"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline2"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <androidx.constraintlayout.utils.widget.MotionButton
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="Eliminar"
+            android:textColor="@color/text"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat"
+            android:textAllCaps="false"
+            android:background="@drawable/button_cancel"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:id="@+id/btnEliminar"/>
+
+        <androidx.constraintlayout.utils.widget.MotionButton
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="Editar"
+            android:textColor="@color/text"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat"
+            android:textAllCaps="false"
+            android:background="@drawable/button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:id="@+id/btnEditar"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

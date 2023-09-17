@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="C:\Users\jeyje\Documents\GitHub\testISA\MisPropinasIsa\app"
+    name=":app"
+    type="APP"
+    maven="Mis Propinas ISA:app:"
+    agpVersion="8.1.1"
+    buildFolder="build"
+    bootClassPath="C:\Users\jeyje\AppData\Local\Android\Sdk\platforms\android-34\android.jar;C:\Users\jeyje\AppData\Local\Android\Sdk\build-tools\33.0.1\core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>
