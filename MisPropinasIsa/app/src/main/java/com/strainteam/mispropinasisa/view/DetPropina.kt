@@ -16,12 +16,18 @@ import com.strainteam.mispropinasisa.viewmodel.HistorialViewModel
 class DetPropina : AppCompatActivity() {
     private lateinit var binding : ActivityDetPropinaBinding
     private val historialViewModel: HistorialViewModel by viewModels()
+    private var nombre = ""
+    private var monto = ""
+    private var propinaPorcentaje = ""
+    private var propina = 0.0
+    private var total = ""
+    private var id = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetPropinaBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val id = intent.getIntExtra("id",0).toString()
+        id = intent.getIntExtra("id",0).toString()
         historialViewModel.getOneHistorial(id)
 
         historialViewModel.getOneHist.observe(this, Observer {
@@ -32,6 +38,23 @@ class DetPropina : AppCompatActivity() {
             binding.tvDescuento.text = "Propina: ${it.Data.propinaPorcentaje}%"
             binding.tvTotalDesc.text = "Monto Prop: ${it.Data.propina}"
             binding.tvTotal.text = "Total: ${it.Data.total}"
+        })
+        historialViewModel.error.observe(this, Observer {
+            if(it){
+                Toast.makeText(this, "Error debe llenar los campos correctamente", Toast.LENGTH_SHORT).show()
+            }
+        })
+        historialViewModel.errorProp.observe(this, Observer {
+            if(it){
+                Toast.makeText(this, "Error el porcentaje de propina no puede ser mayor al 100%", Toast.LENGTH_SHORT).show()
+            }
+        })
+        historialViewModel.valorPropina.observe(this, Observer {
+            propina = it
+        })
+        historialViewModel.valorTotal.observe(this, Observer {
+            total = it
+            confirmar()
         })
 
         binding.btnEliminar.setOnClickListener {
@@ -44,6 +67,7 @@ class DetPropina : AppCompatActivity() {
                 val intent = Intent(this, MainActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                 startActivity(intent)
+                finish()
             }
             builder.setNegativeButton("Cancelar"){ _, _ -> }
             builder.show()
@@ -64,9 +88,31 @@ class DetPropina : AppCompatActivity() {
                 dialog.dismiss()
             }
             binding2.btnGuardar.setOnClickListener {
-
+                nombre = binding2.etNombreLocal.text.toString()
+                monto = binding2.etMonto.text.toString()
+                propinaPorcentaje = binding2.etPropina.text.toString()
+                historialViewModel.validarUpdate(nombre, monto, propinaPorcentaje)
             }
         }
 
+    }
+
+    private fun confirmar(){
+        val builder = MaterialAlertDialogBuilder(this)
+        builder.background = getDrawable(R.drawable.recycler)
+        builder.setTitle("Confirmar")
+        builder.setMessage("¿Desea guardar esta propina?\n" +
+                "Monto propina: $propina\n" +
+                "Total a pagar: $total\n")
+        builder.setPositiveButton("Guardar"){ _, _ ->
+            historialViewModel.updateRegistro(id,nombre, monto, propinaPorcentaje)
+            historialViewModel.getNewHistorial()
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+            startActivity(intent)
+            finish()
+        }
+        builder.setNegativeButton("Cancelar"){ _, _ -> }
+        builder.show()
     }
 }

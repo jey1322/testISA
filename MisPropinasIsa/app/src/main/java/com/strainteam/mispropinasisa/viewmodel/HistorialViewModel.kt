@@ -54,6 +54,28 @@ class HistorialViewModel(application: Application): AndroidViewModel(application
         getHistorialUseCase.saveHistorial(NombreComer, subtotal.toDouble(), propinaPorcentaje, propina.toDouble(), total.toDouble(), fecha, moneda, codMoneda)
     }
 
+    fun updateRegistro(Id: String, nombreComercio: String, subtotal: String, propinaPorcentaje: String){
+        val propina =(subtotal.toDouble() * propinaPorcentaje.toDouble())/100
+        val total : Double = subtotal.toDouble() + propina
+        val fecha = SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.getDefault()).format(System.currentTimeMillis())
+        getHistorialUseCase.updateRegistro(Id,nombreComercio,subtotal.toDouble(),propinaPorcentaje,propina,total,fecha)
+    }
+
+    fun validarUpdate(nombreComercio: String, subtotal: String, propinaPorcentaje: String){
+        if(nombreComercio.isEmpty() || subtotal.isEmpty() || propinaPorcentaje.isEmpty()){
+            error.postValue(true)
+            return
+        } else if(propinaPorcentaje.toDouble() > 100){
+            errorProp.postValue(true)
+            return
+        }else{
+            val propina =(subtotal.toDouble() * propinaPorcentaje.toDouble())/100
+            val total : Double = subtotal.toDouble() + propina
+            valorPropina.postValue(propina)
+            valorTotal.postValue(total.toString())
+        }
+    }
+
     fun getNewHistorial(){
         val result = getHistorialUseCase()
         if(result.lista.isEmpty()) {

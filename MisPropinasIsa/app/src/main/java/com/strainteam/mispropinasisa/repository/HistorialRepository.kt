@@ -87,4 +87,8 @@ class HistorialRepository(context: Context) {
     fun deleteHistorial(id: String) {
         db.deleteOneHistorial(id)
     }
+
+    fun updateRegistro(Id: String, nombreComercio: String, subtotal: Double, descuentoPorcentaje: String, descuento: Double, total: Double, fecha: String){
+        db.updateOneHistorial(Id,nombreComercio, subtotal, descuentoPorcentaje, descuento, total, fecha)
+    }
 }
