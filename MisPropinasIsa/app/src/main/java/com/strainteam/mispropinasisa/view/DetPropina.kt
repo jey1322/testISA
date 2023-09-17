@@ -37,7 +37,7 @@ class DetPropina : AppCompatActivity() {
             builder.background = getDrawable(R.drawable.recycler)
             builder.setTitle("Desea eliminar este registro?")
             builder.setMessage("Si elimina, no podrá recuperar este dato")
-            builder.setPositiveButton("Guardar"){ _, _ ->
+            builder.setPositiveButton("Eliminar"){ _, _ ->
                 historialViewModel.deleteHistorial(id)
                 val intent = Intent(this, MainActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
