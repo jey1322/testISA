@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Editar registro"
+        android:textColor="@color/text"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:fontFamily="@font/montserrat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/tv_titulo"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv_titulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Nombre del Local"
+                android:textColor="@color/text"
+                android:textSize="15dp"
+                android:fontFamily="@font/montserrat"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:id="@+id/tv_nombre_local"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/recycler"
+                android:textColor="@color/text"
+                android:textSize="13dp"
+                android:hint="Digite el nombre"
+                android:fontFamily="@font/montserrat"
+                android:paddingHorizontal="10dp"
+                android:inputType="text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_nombre_local"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="20dp"
+                android:id="@+id/et_nombre_local"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Monto"
+                android:textColor="@color/text"
+                android:textSize="15dp"
+                android:fontFamily="@font/montserrat"
+                app:layout_constraintTop_toBottomOf="@id/et_nombre_local"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/tvMonto"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Porcentaje propina"
+                android:textColor="@color/text"
+                android:textSize="15dp"
+                android:fontFamily="@font/montserrat"
+                app:layout_constraintTop_toBottomOf="@id/etMonto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/tvPropina"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/recycler"
+                android:textColor="@color/text"
+                android:hint="Digite el monto"
+                android:textSize="13dp"
+                android:fontFamily="@font/montserrat"
+                android:paddingHorizontal="10dp"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMonto"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="20dp"
+                android:id="@+id/etMonto"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/recycler"
+                android:textColor="@color/text"
+                android:textSize="13dp"
+                android:fontFamily="@font/montserrat"
+                android:paddingHorizontal="10dp"
+                android:hint="porcentaje de propina"
+                android:maxLength="3"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPropina"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="20dp"
+                android:id="@+id/etPropina"/>
+
+            <androidx.constraintlayout.utils.widget.MotionButton
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text="Cancelar"
+                android:textAllCaps="false"
+                android:textColor="@color/text"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:fontFamily="@font/montserrat"
+                android:background="@drawable/button_cancel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/etPropina"
+                android:layout_marginTop="40dp"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="30dp"
+                android:id="@+id/btnCancelar"/>
+
+            <androidx.constraintlayout.utils.widget.MotionButton
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text="Guardar"
+                android:textAllCaps="false"
+                android:textColor="@color/text"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:fontFamily="@font/montserrat"
+                android:background="@drawable/button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/etPropina"
+                android:layout_marginTop="40dp"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="30dp"
+                android:id="@+id/btnGuardar"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

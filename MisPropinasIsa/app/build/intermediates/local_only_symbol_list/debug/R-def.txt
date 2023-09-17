@@ -54,6 +54,7 @@ id tv_titulo
 id tvfech
 layout activity_det_propina
 layout activity_main
+layout edit_propina
 layout propinas_list
 layout sheet_add_propina
 mipmap ic_launcher

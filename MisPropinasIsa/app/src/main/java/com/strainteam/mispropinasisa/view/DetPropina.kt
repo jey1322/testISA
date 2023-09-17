@@ -9,6 +9,8 @@ import androidx.lifecycle.Observer
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.strainteam.mispropinasisa.R
 import com.strainteam.mispropinasisa.databinding.ActivityDetPropinaBinding
+import com.strainteam.mispropinasisa.databinding.EditPropinaBinding
+import com.strainteam.mispropinasisa.databinding.SheetAddPropinaBinding
 import com.strainteam.mispropinasisa.viewmodel.HistorialViewModel
 
 class DetPropina : AppCompatActivity() {
@@ -45,6 +47,25 @@ class DetPropina : AppCompatActivity() {
             }
             builder.setNegativeButton("Cancelar"){ _, _ -> }
             builder.show()
+        }
+
+        binding.btnEditar.setOnClickListener {
+            val builder = MaterialAlertDialogBuilder(this)
+            builder.background = getDrawable(R.drawable.button_cancel)
+            val view = layoutInflater.inflate(R.layout.edit_propina, null)
+            val binding2 = EditPropinaBinding.bind(view)
+            builder.setView(binding2.root)
+            val dialog = builder.create()
+            dialog.show()
+            binding2.etNombreLocal.setText(binding.tvNombreLocal.text.toString())
+            binding2.etMonto.setText(binding.tvMonto.text.toString().split(" ")[1])
+            binding2.etPropina.setText(binding.tvDescuento.text.toString().split(" ")[1].split("%")[0])
+            binding2.btnCancelar.setOnClickListener {
+                dialog.dismiss()
+            }
+            binding2.btnGuardar.setOnClickListener {
+
+            }
         }
 
     }

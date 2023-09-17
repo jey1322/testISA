@@ -4,6 +4,14 @@
         "source": "C:\\Users\\jeyje\\.gradle\\daemon\\8.0\\com.strainteam.mispropinasisa.app-main-40:\\layout\\sheet_add_propina.xml"
     },
     {
+        "merged": "C:\\Users\\jeyje\\.gradle\\daemon\\8.0\\com.strainteam.mispropinasisa.app-mergeDebugResources-37:\\layout\\edit_propina.xml",
+        "source": "C:\\Users\\jeyje\\.gradle\\daemon\\8.0\\com.strainteam.mispropinasisa.app-main-40:\\layout\\edit_propina.xml"
+    },
+    {
+        "merged": "com.strainteam.mispropinasisa.app-mergeDebugResources-37:/layout/edit_propina.xml",
+        "source": "com.strainteam.mispropinasisa.app-main-40:/layout/edit_propina.xml"
+    },
+    {
         "merged": "C:\\Users\\jeyje\\.gradle\\daemon\\8.0\\com.strainteam.mispropinasisa.app-mergeDebugResources-37:\\layout\\activity_det_propina.xml",
         "source": "C:\\Users\\jeyje\\.gradle\\daemon\\8.0\\com.strainteam.mispropinasisa.app-main-40:\\layout\\activity_det_propina.xml"
     },
@@ -14,9 +22,5 @@
     {
         "merged": "C:\\Users\\jeyje\\.gradle\\daemon\\8.0\\com.strainteam.mispropinasisa.app-mergeDebugResources-37:\\layout\\activity_main.xml",
         "source": "C:\\Users\\jeyje\\.gradle\\daemon\\8.0\\com.strainteam.mispropinasisa.app-main-40:\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "com.strainteam.mispropinasisa.app-mergeDebugResources-37:/layout/sheet_add_propina.xml",
-        "source": "com.strainteam.mispropinasisa.app-main-40:/layout/sheet_add_propina.xml"
     }
 ]
