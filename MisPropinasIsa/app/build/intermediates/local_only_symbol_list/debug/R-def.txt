@@ -8,6 +8,7 @@ color backp
 color backs
 color black
 color celeste
+color ic_launcherfin_background
 color purple_200
 color purple_500
 color purple_700
@@ -23,6 +24,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable recycler
 font montserrat
+font work_sans
 id btnCancelar
 id btnEditar
 id btnEliminar
@@ -60,6 +62,9 @@ layout propinas_list
 layout sheet_add_propina
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap ic_launcherfin
+mipmap ic_launcherfin_foreground
+mipmap ic_launcherfin_round
 string app_name
 style Base.Theme.MisPropinasISA
 style Theme.MisPropinasISA

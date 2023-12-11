@@ -1406,6 +1406,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcherfin_background
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -3030,6 +3031,7 @@ drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 font montserrat
+font work_sans
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3755,6 +3757,9 @@ layout sheet_add_propina
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap ic_launcherfin
+mipmap ic_launcherfin_foreground
+mipmap ic_launcherfin_round
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
 string abc_action_bar_up_description
